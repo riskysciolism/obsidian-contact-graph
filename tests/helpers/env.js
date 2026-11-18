@@ -142,11 +142,15 @@ function makeApp(vault) {
 }
 
 /* ---------- Obsidian-Modul-Attrappe ---------- */
+let mockInstalled = false;
+
 function installObsidianMock() {
-  const stubPath = path.join(__dirname, ".obsidian-mock.js");
+  /* Eigene Datei je Prozess: parallele Testdateien dürfen sich nicht überschreiben */
+  const os = require("os");
+  const stubPath = path.join(os.tmpdir(), `cg-obsidian-mock-${process.pid}.js`);
+  if (mockInstalled) return null;
   const dom = setupDom();
   fs.writeFileSync(stubPath, `
-const { JSDOM } = require("jsdom");
 class Notice { constructor(msg) { (global.__notices = global.__notices || []).push(String(msg)); } hide() {} }
 class Modal {
   constructor(app) {
@@ -196,6 +200,7 @@ module.exports = { setIcon,
   },
 };
 `);
+  mockInstalled = true;
   const orig = Module._resolveFilename;
   Module._resolveFilename = function (req, ...rest) {
     return req === "obsidian" ? stubPath : orig.call(this, req, ...rest);
