@@ -1,0 +1,9 @@
+{
+  "id": "contact-graph",
+  "name": "Contact Graph",
+  "version": "0.52.0",
+  "minAppVersion": "1.4.0",
+  "description": "Beziehungsnetz der Kontakte als Ringdiagramm in der Seitenleiste.",
+  "author": "riskysciolism",
+  "isDesktopOnly": false
+}

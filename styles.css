@@ -1,0 +1,1255 @@
+/* Contact Graph — Darstellung */
+
+.cg-root {
+  padding: 10px 12px 24px 12px;
+}
+
+.cg-head {
+  margin-bottom: 8px;
+}
+
+.cg-title {
+  font-size: 1.05em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-normal);
+}
+
+.cg-sub {
+  font-size: 0.82em;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.cg-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 12px 0;
+}
+
+.cg-btn {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.8em;
+  cursor: pointer;
+  box-shadow: none;
+  height: auto;
+}
+
+.cg-btn:hover {
+  border-color: var(--background-modifier-border-hover);
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+
+.cg-btn.on {
+  background: var(--interactive-accent);
+  border-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+  font-weight: 600;
+}
+
+.cg-canvas {
+  background: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 12px;
+  overflow: auto;
+  max-height: 70vh;
+}
+
+.cg-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Knoten */
+.cg-node {
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+.cg-node:hover rect,
+.cg-node:hover circle {
+  stroke: var(--interactive-accent-hover);
+  stroke-width: 3;
+}
+.cg-node:hover text {
+  fill: var(--text-normal);
+}
+
+.cg-svg.cg-hovering .cg-node:not(.cg-on-path) {
+  opacity: 0.2;
+}
+.cg-svg.cg-hovering .cg-edge:not(.cg-hl) {
+  opacity: 0.08;
+}
+
+.cg-edge {
+  transition: stroke-width 0.15s ease, opacity 0.15s ease;
+}
+.cg-edge.cg-hl {
+  stroke-width: 3.2;
+  opacity: 1;
+}
+
+.cg-edge {
+  fill: none;
+}
+
+.cg-edge-label {
+  fill: var(--text-normal);
+  font-size: 10.5px;
+  font-weight: 600;
+  paint-order: stroke;
+  stroke: var(--background-primary);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.cg-hint {
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+/* Merkmalsfilter */
+.cg-chips .cg-btn {
+  font-size: 0.75em;
+  padding: 3px 10px;
+}
+
+.cg-dim {
+  opacity: 0.14;
+}
+
+/* Presets und Export */
+.cg-select {
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.8em;
+  height: auto;
+}
+
+.cg-preset-input {
+  margin: 8px 0 10px 0;
+}
+
+/* Dialog: Beziehungen vervollständigen */
+.cg-plan {
+  max-height: 55vh;
+  overflow-y: auto;
+  margin: 8px 0 12px 0;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+.cg-plan-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.cg-plan-row:last-child {
+  border-bottom: none;
+}
+
+.cg-plan-text {
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.cg-plan-item {
+  color: var(--text-muted);
+  font-size: 0.92em;
+}
+
+.cg-plan-head {
+  margin: 14px 0 4px 0;
+  font-size: 0.78em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.cg-warn {
+  color: var(--color-orange);
+  font-weight: 700;
+  width: 16px;
+}
+
+.cg-warn-text {
+  color: var(--color-orange);
+}
+
+.cg-journal {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 6px 0 10px 0;
+  flex-wrap: wrap;
+}
+
+.cg-journal-input {
+  flex: 1;
+  min-width: 180px;
+}
+
+/* Kontakt-Dialog */
+.cg-form {
+  max-height: 62vh;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.cg-form-head {
+  margin: 14px 0 6px 0;
+  font-size: 0.78em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding-bottom: 3px;
+}
+
+.cg-form-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.cg-form-label {
+  width: 140px;
+  flex: 0 0 140px;
+  font-size: 0.88em;
+  color: var(--text-muted);
+}
+
+.cg-form-input {
+  flex: 1;
+  min-width: 120px;
+}
+
+.cg-rel {
+  margin-bottom: 10px;
+}
+
+.cg-chips-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0;
+}
+
+.cg-chip {
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 0.82em;
+}
+
+.cg-chip-x {
+  margin-left: 6px;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.cg-chip-x:hover {
+  color: var(--color-red);
+}
+
+.cg-chip-empty {
+  color: var(--text-faint);
+  font-size: 0.85em;
+}
+
+.cg-journal-box {
+  margin: 4px 0 8px 0;
+  font-size: 0.88em;
+}
+
+.cg-journal-line {
+  padding: 1px 0;
+  color: var(--text-normal);
+}
+
+/* ---------------- Kontaktkarte (Codeblock contact-card) ---------------- */
+
+.cg-card {
+  margin: 4px 0 20px 0;
+}
+
+.cg-badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 9px;
+}
+
+.cg-badge {
+  font-size: 0.74em;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  font-weight: 500;
+}
+
+.cg-badge-kind {
+  background: var(--background-modifier-border);
+  color: var(--text-normal);
+}
+
+.cg-badge-verh {
+  background: var(--color-purple);
+  color: #fff;
+}
+
+.cg-badge-muted {
+  background: transparent;
+  border: 1px solid var(--background-modifier-border);
+  color: var(--text-muted);
+}
+
+.cg-icon-btn {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  box-shadow: none;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.cg-icon-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 1.8;
+}
+
+.cg-icon-btn:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+
+.cg-icon-btn:active {
+  background: var(--background-modifier-active-hover, var(--background-modifier-hover));
+}
+
+.cg-icon-btn:focus-visible {
+  outline: 2px solid var(--interactive-accent);
+  outline-offset: 1px;
+}
+
+.cg-icon-sm {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+}
+
+.cg-icon-sm svg {
+  width: 14px;
+  height: 14px;
+}
+
+.cg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.cg-cell {
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+.cg-cell-label {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+}
+
+.cg-cell-value {
+  margin-top: 2px;
+  font-size: 0.95em;
+}
+
+.cg-relbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.cg-relgroup {
+  min-width: 170px;
+}
+
+.cg-chip-link {
+  cursor: pointer;
+}
+
+.cg-chip-link:hover {
+  border-color: var(--interactive-accent);
+  color: var(--text-accent);
+}
+
+.cg-journal {
+  margin-top: 18px;
+}
+
+.cg-journal-line {
+  padding: 2px 0;
+  font-size: 0.92em;
+}
+
+.cg-journal-add {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* Abschnittskästen */
+.cg-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+  align-items: start;
+}
+
+.cg-section {
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.cg-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.cg-section-title {
+  font-size: 0.72em;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--text-faint);
+  font-weight: 600;
+}
+
+.cg-section-body {
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.cg-section-body > :first-child {
+  margin-top: 0;
+}
+
+.cg-section-body > :last-child {
+  margin-bottom: 0;
+}
+
+.cg-addsection {
+  margin-top: 12px;
+}
+
+.cg-add-btn {
+  font-size: 0.82em;
+  opacity: 0.75;
+}
+
+.cg-add-btn:hover {
+  opacity: 1;
+}
+
+/* Eingebetteter Graph */
+.cg-embed {
+  max-height: none;
+}
+
+.cg-embed svg {
+  width: 100%;
+  height: auto;
+}
+
+.cg-embed-foot {
+  margin-top: 6px;
+  font-size: 0.78em;
+  color: var(--text-faint);
+  text-align: right;
+}
+
+.cg-hidden-section {
+  display: none !important;
+}
+
+.cg-empty-hint {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  font-size: 0.86em;
+  color: var(--text-muted);
+}
+
+/* Kontaktblock, Abschnittswerkzeuge, Karte */
+.cg-info {
+  margin-top: 14px;
+}
+
+.cg-inforows {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 6px 22px;
+}
+
+.cg-inforow {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  padding: 3px 0;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.cg-inforow:last-child {
+  border-bottom: none;
+}
+
+.cg-inforow-label {
+  flex: 0 0 84px;
+  font-size: 0.74em;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-faint);
+}
+
+.cg-inforow-value {
+  flex: 1;
+  font-size: 0.94em;
+  word-break: break-word;
+}
+
+.cg-section-tools {
+  display: flex;
+  gap: 4px;
+  opacity: 0.55;
+  transition: opacity 0.12s ease;
+}
+
+.cg-section:hover .cg-section-tools {
+  opacity: 1;
+}
+
+.cg-icon-sm {
+  width: 24px;
+  height: 24px;
+  font-size: 0.78em;
+  border-radius: 7px;
+}
+
+.cg-section-edit {
+  width: 100%;
+  min-height: 90px;
+  font-family: var(--font-monospace);
+  font-size: 0.86em;
+  resize: vertical;
+}
+
+.cg-address-text {
+  margin-bottom: 8px;
+  font-size: 0.92em;
+}
+
+.cg-map {
+  font-size: 0.82em;
+  color: var(--text-faint);
+}
+
+.cg-map-frame {
+  width: 100%;
+  height: 150px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 10px;
+  display: block;
+}
+
+.cg-map-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.8em;
+}
+
+/* Profilkarte: Bild und Name überlagert (Apple-Stil) */
+.cg-profile {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+}
+
+.cg-profile-media {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 17px 17px 0 0;
+  background: linear-gradient(135deg, var(--background-modifier-border), var(--background-secondary));
+}
+
+.cg-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  max-width: none;
+}
+
+.cg-profile-initials {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2em;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.cg-profile-shade {
+  position: absolute;
+  inset: 0;
+  /* Rückfall ohne color-mix */
+  background: linear-gradient(to top, var(--background-primary) 0%, transparent 62%);
+  /* Theme-Farbe mit Transparenz: Verlauf ins Hintergrundfarbe des Themes */
+  background: linear-gradient(to top,
+    var(--background-primary) 0%,
+    color-mix(in srgb, var(--background-primary) 88%, transparent) 16%,
+    color-mix(in srgb, var(--background-primary) 55%, transparent) 34%,
+    color-mix(in srgb, var(--background-primary) 18%, transparent) 50%,
+    transparent 66%);
+  pointer-events: none;
+}
+
+.cg-profile-id {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 14px;
+}
+
+/* Obsidian setzt h1-Farben mit höherer Spezifität — deshalb !important */
+.markdown-preview-view .cg-profile-name,
+.markdown-rendered .cg-profile-name,
+.cg-profile .cg-profile-name {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 2em;
+  line-height: 1.15;
+  color: var(--text-normal) !important;
+  text-shadow: 0 1px 6px color-mix(in srgb, var(--background-primary) 70%, transparent);
+}
+
+.cg-profile-role {
+  color: var(--text-muted) !important;
+  font-size: 0.98em;
+  margin-top: 2px;
+  text-shadow: 0 1px 5px color-mix(in srgb, var(--background-primary) 70%, transparent);
+}
+
+.cg-profile-id .cg-badges {
+  margin-top: 8px;
+}
+
+.cg-profile-id .cg-badge {
+  background: var(--background-secondary);
+  color: var(--text-normal) !important;
+  border: 1px solid var(--background-modifier-border);
+}
+
+.cg-profile-edit {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.22);
+  border: none;
+  color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+}
+
+.cg-profile-edit svg {
+  width: 15px;
+  height: 15px;
+  stroke-width: 1.8;
+}
+
+.cg-profile-edit:hover {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.cg-profile-body {
+  padding: 14px 18px 16px;
+}
+
+.cg-profile-body .cg-relbox {
+  border-top: 1px solid var(--background-modifier-border);
+  margin-top: 14px;
+  padding-top: 12px;
+}
+
+@media (max-width: 600px) {
+  .cg-profile-media { height: 200px; }
+  .cg-profile-name { font-size: 1.6em; }
+}
+
+.cg-profile-reload {
+  right: 56px;
+  font-size: 1.05em;
+}
+
+/* Graph-Abschnitt: volle Breite */
+.cg-section-wide {
+  grid-column: 1 / -1;
+}
+
+.cg-chip-on {
+  border-color: var(--interactive-accent);
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+/* Zoom-Steuerung */
+.cg-zoom-host {
+  position: relative;
+}
+
+.cg-zoom {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 10px;
+  padding: 2px 4px;
+  z-index: 5;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+.cg-zoom-btn {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  color: var(--text-normal);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95em;
+  line-height: 1;
+  box-shadow: none;
+}
+
+.cg-zoom-btn:hover {
+  background: var(--background-modifier-hover);
+}
+
+.cg-zoom-label {
+  font-size: 0.72em;
+  color: var(--text-muted);
+  min-width: 40px;
+  text-align: center;
+}
+
+.cg-canvas {
+  max-height: 70vh;
+  overflow: auto;
+}
+
+.cg-relgroup-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.cg-rel-add {
+  align-self: flex-end;
+  margin-top: 6px;
+}
+
+.cg-pick-row {
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+.cg-pick-row:hover {
+  background: var(--background-modifier-hover);
+}
+
+/* Sektorflächen: nur beim Überfahren sichtbar */
+.cg-sector {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+}
+
+.cg-sector.cg-on {
+  opacity: 1;
+}
+
+.cg-sector-label {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+}
+
+.cg-sector-label.cg-on {
+  opacity: 1;
+}
+
+/* Profilbild: Dateiauswahl und Ziehen */
+.cg-hidden-input {
+  display: none;
+}
+
+.cg-profile-media.cg-drop {
+  outline: 2px dashed var(--interactive-accent);
+  outline-offset: -4px;
+}
+
+.cg-pick-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.cg-btn-accent {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border-color: var(--interactive-accent);
+}
+
+.cg-profile-pic {
+  right: 46px;
+}
+
+/* Verlauf: Einträge */
+.cg-journal {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cg-journal-entry {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: var(--background-primary-alt, var(--background-secondary));
+}
+
+.cg-journal-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cg-journal-date {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  font-size: 0.86em;
+  color: var(--text-muted);
+}
+
+.cg-journal-title {
+  font-weight: 600;
+}
+
+.cg-journal-acts {
+  margin-left: auto;
+  display: flex;
+  gap: 2px;
+  opacity: 0.55;
+}
+
+.cg-journal-entry:hover .cg-journal-acts {
+  opacity: 1;
+}
+
+.cg-journal-meta {
+  margin-top: 6px;
+}
+
+.cg-journal-key {
+  color: var(--text-faint);
+  font-size: 0.86em;
+}
+
+.cg-journal-line {
+  font-size: 0.92em;
+  margin: 1px 0;
+}
+
+.cg-journal-body {
+  margin-top: 6px;
+  font-size: 0.94em;
+}
+
+.cg-badge-journal {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+.cg-btn-danger {
+  background: var(--background-modifier-error);
+  color: var(--text-on-accent);
+  border-color: var(--background-modifier-error);
+}
+
+.cg-picked {
+  background: var(--background-modifier-hover);
+}
+
+.cg-form-col {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.cg-img-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Geschenkideen */
+.cg-gifts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cg-gift {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 10px;
+  background: var(--background-primary-alt, var(--background-secondary));
+}
+
+.cg-gift-done {
+  opacity: 0.62;
+}
+
+.cg-gift-done .cg-gift-title {
+  text-decoration: line-through;
+}
+
+.cg-gift-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.cg-gift-top {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cg-gift-title {
+  font-weight: 600;
+}
+
+.cg-gift-price {
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+.cg-gift-desc {
+  font-size: 0.92em;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.cg-gift-link {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.9em;
+}
+
+.cg-gift-acts {
+  display: flex;
+  gap: 2px;
+  opacity: 0.55;
+}
+
+.cg-gift:hover .cg-gift-acts {
+  opacity: 1;
+}
+
+/* Bildausschnitt */
+.cg-crop-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.cg-crop {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 1px solid var(--background-modifier-border);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.cg-crop-empty {
+  background: var(--background-secondary);
+}
+
+.cg-crop-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: none;
+}
+
+.cg-zoom {
+  width: 100%;
+  max-width: 260px;
+}
+
+.cg-crop-hint {
+  font-size: 0.76em;
+  color: var(--text-faint);
+  max-width: 110px;
+  text-align: center;
+}
+
+.cg-btn-small {
+  font-size: 0.78em;
+  padding: 2px 6px;
+}
+
+.cg-profile-img {
+  object-fit: cover;
+}
+
+/* Profilbild-Dialog */
+.cg-image-editor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 18px;
+}
+
+.cg-crop-large {
+  width: min(62vw, 260px);
+  height: min(62vw, 260px);
+  cursor: grab;
+}
+
+.cg-crop-large:active {
+  cursor: grabbing;
+}
+
+/* Schalterzeile im Beziehungsdialog */
+.cg-switch-row {
+  align-items: center;
+  gap: 8px;
+}
+
+.cg-switch-row .cg-form-label {
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
+.cg-switch-row .cg-form-label.cg-on {
+  color: var(--text-normal);
+  font-weight: 600;
+}
+
+.cg-switch {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+}
+
+/* Beziehungsblock im Kontaktdialog */
+.cg-rel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.cg-btn-small {
+  padding: 0 8px;
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+
+select.cg-locked,
+select:disabled {
+  opacity: 1;
+  color: var(--text-normal);
+  background: var(--background-secondary);
+}
+
+/* Abschnitts-Dialog */
+.cg-section-modal .cg-sec-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.cg-section-modal h3 {
+  margin: 0;
+  font-size: 1.15em;
+}
+
+.cg-sec-tools {
+  display: flex;
+  gap: 6px;
+}
+
+.cg-section-edit {
+  width: 100%;
+  min-height: 45vh;
+  resize: vertical;
+  font-family: var(--font-monospace);
+  font-size: 0.92em;
+  line-height: 1.5;
+  padding: 10px 12px;
+}
+
+.cg-sec-preview {
+  min-height: 45vh;
+  max-height: 70vh;
+  overflow: auto;
+  padding: 4px 2px;
+}
+
+.cg-sec-bar {
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+
+/* Maximiert: fast bildschirmfüllend */
+.modal.cg-maximized {
+  width: 94vw;
+  max-width: 94vw;
+  height: 92vh;
+  max-height: 92vh;
+}
+
+.modal.cg-maximized .modal-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal.cg-maximized .cg-section-edit {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.modal.cg-maximized .cg-sec-preview {
+  flex: 1 1 auto;
+  max-height: none;
+}
+
+/* Knopf mit Icon und Beschriftung */
+.cg-text-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cg-btn-ico {
+  display: inline-flex;
+  align-items: center;
+}
+
+.cg-btn-ico svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 1.8;
+}
+
+.cg-text-btn:hover .cg-btn-ico {
+  color: var(--text-normal);
+}
+
+.cg-chip-x {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  color: var(--text-faint);
+}
+
+.cg-chip-x svg {
+  width: 11px;
+  height: 11px;
+}
+
+.cg-chip-x:hover {
+  color: var(--text-normal);
+  background: var(--background-modifier-hover);
+}

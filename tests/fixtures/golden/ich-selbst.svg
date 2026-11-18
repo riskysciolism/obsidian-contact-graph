@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="cg-svg" viewBox="0 0 900 760" width="900" height="760">
+<rect width="900" height="760" fill="var(--background-primary)"/>
+<path class="cg-sector" data-sector="family" d="M 450 380 L 450.0 104.5 A 275.5 275.5 0 1 1 227.2 542.2 Z" fill="var(--background-secondary)" fill-opacity="0.55" stroke="var(--background-modifier-border)" stroke-opacity="0.5" stroke-width="1"/>
+<text class="cg-sector-label" data-sector="family" x="663.5" y="488.7" fill="var(--text-faint)" font-size="10.5" font-weight="600" text-anchor="middle">Familie</text>
+<path class="cg-sector" data-sector="friends" d="M 450 380 L 227.2 542.2 A 275.5 275.5 0 0 1 176.0 351.4 Z" fill="var(--background-secondary)" fill-opacity="0.55" stroke="var(--background-modifier-border)" stroke-opacity="0.5" stroke-width="1"/>
+<text class="cg-sector-label" data-sector="friends" x="218.7" y="442.2" fill="var(--text-faint)" font-size="10.5" font-weight="600" text-anchor="middle">Freunde</text>
+<path class="cg-sector" data-sector="work" d="M 450 380 L 176.0 351.4 A 275.5 275.5 0 0 1 265.6 175.3 Z" fill="var(--background-secondary)" fill-opacity="0.55" stroke="var(--background-modifier-border)" stroke-opacity="0.5" stroke-width="1"/>
+<text class="cg-sector-label" data-sector="work" x="236.5" y="271.3" fill="var(--text-faint)" font-size="10.5" font-weight="600" text-anchor="middle">Arbeit</text>
+<path class="cg-sector" data-sector="acquaintances" d="M 450 380 L 265.6 175.3 A 275.5 275.5 0 0 1 450.0 104.5 Z" fill="var(--background-secondary)" fill-opacity="0.55" stroke="var(--background-modifier-border)" stroke-opacity="0.5" stroke-width="1"/>
+<text class="cg-sector-label" data-sector="acquaintances" x="364.1" y="156.4" fill="var(--text-faint)" font-size="10.5" font-weight="600" text-anchor="middle">Bekannte</text>
+<path class="cg-edge" data-a="Ich Selbst" data-b="Petra Partner" data-kind="partner" data-label="Partnerin" x1="450.0" y1="380.0" x2="484.6" y2="240.5" d="M 450.0 380.0 Q 454.7 307.2 484.6 240.5" fill="none" stroke="var(--color-red)" stroke-width="1.7" opacity="0.8"/>
+<path class="cg-edge" data-a="Alex Beispiel" data-b="Alex Beispiel" data-kind="parent" data-label="" x1="602.5" y1="253.4" x2="602.5" y2="253.4" d="M 602.5 253.4 Q 602.5 253.4 602.5 253.4" fill="none" stroke="var(--color-blue)" stroke-width="1.7" opacity="0.8"/>
+<path class="cg-edge" data-a="Andrea Beispiel" data-b="Andrea Beispiel" data-kind="parent" data-label="" x1="532.9" y1="344.9" x2="532.9" y2="344.9" d="M 532.9 344.9 Q 532.9 344.9 532.9 344.9" fill="none" stroke="var(--color-blue)" stroke-width="1.7" opacity="0.8"/>
+<path class="cg-edge" data-a="Ich Selbst" data-b="Ich Selbst" data-kind="parent" data-label="" x1="450.0" y1="380.0" x2="450.0" y2="380.0" d="M 450.0 380.0 Q 450.0 380.0 450.0 380.0" fill="none" stroke="var(--color-blue)" stroke-width="1.7" opacity="0.8"/>
+<path class="cg-edge" data-a="Bruno Beispiel" data-b="Ich Selbst" data-kind="siblings" data-label="Schwester" x1="643.7" y1="474.6" x2="450.0" y2="380.0" d="M 643.7 474.6 Q 555.3 409.9 450.0 380.0" fill="none" stroke="var(--color-blue)" stroke-width="1.7" opacity="0.8"/>
+<path class="cg-edge" data-a="Frieda Freund" data-b="Ich Selbst" data-kind="friends" data-label="Freundin" x1="299.7" y1="429.1" x2="450.0" y2="380.0" d="M 299.7 429.1 Q 370.4 391.0 450.0 380.0" fill="none" stroke="var(--color-green)" stroke-width="1.7" opacity="0.8"/>
+<path class="cg-edge" data-a="Ich Selbst" data-b="Kai Kollege" data-kind="work" data-label="Kollege" x1="450.0" y1="380.0" x2="306.8" y2="314.3" d="M 450.0 380.0 Q 372.5 360.0 306.8 314.3" fill="none" stroke="var(--color-orange)" stroke-width="1.7" opacity="0.8"/>
+<path class="cg-edge" data-a="Ich Selbst" data-b="Nora Nachbar" data-kind="neighbors" data-label="Nachbarin" x1="450.0" y1="380.0" x2="371.6" y2="219.3" d="M 450.0 380.0 Q 425.3 292.6 371.6 219.3" fill="none" stroke="var(--color-cyan)" stroke-width="1.7" opacity="0.8"/>
+<path class="cg-edge" data-a="Ich Selbst" data-b="Kai Kollege" data-kind="relation" data-label="Ich" x1="450.0" y1="380.0" x2="306.8" y2="314.3" d="M 450.0 380.0 Q 372.5 360.0 306.8 314.3" fill="none" stroke="var(--text-faint)" stroke-width="1.7" opacity="0.8"/>
+<path class="cg-edge" data-a="Ich Selbst" data-b="Nora Nachbar" data-kind="relation" data-label="Ich" x1="450.0" y1="380.0" x2="371.6" y2="219.3" d="M 450.0 380.0 Q 425.3 292.6 371.6 219.3" fill="none" stroke="var(--text-faint)" stroke-width="1.7" opacity="0.8"/>
+<path class="cg-edge" data-a="Gustav Beispiel" data-b="Gustav Beispiel" data-kind="parent" data-label="" x1="529.6" y1="459.9" x2="529.6" y2="459.9" d="M 529.6 459.9 Q 529.6 459.9 529.6 459.9" fill="none" stroke="var(--color-blue)" stroke-width="1.7" opacity="0.8"/>
+<path class="cg-edge" data-a="Alex Beispiel" data-b="Otto Beispiel" data-kind="siblings" data-label="Bruder" x1="602.5" y1="253.4" x2="468.6" y2="575.4" d="M 602.5 253.4 Q 506.6 402.4 468.6 575.4" fill="none" stroke="var(--color-blue)" stroke-width="1.7" opacity="0.8"/>
+<path class="cg-edge" data-a="Gisela Beispiel" data-b="Gisela Beispiel" data-kind="parent" data-label="" x1="414.6" y1="463.0" x2="414.6" y2="463.0" d="M 414.6 463.0 Q 414.6 463.0 414.6 463.0" fill="none" stroke="var(--color-blue)" stroke-width="1.7" opacity="0.8"/>
+<path class="cg-edge" data-a="Otto Beispiel" data-b="Otto Beispiel" data-kind="parent" data-label="" x1="468.6" y1="575.4" x2="468.6" y2="575.4" d="M 468.6 575.4 Q 468.6 575.4 468.6 575.4" fill="none" stroke="var(--color-blue)" stroke-width="1.7" opacity="0.8"/>
+<g class="cg-node" data-name="Ich Selbst" data-sector="family" data-path="Ich Selbst">
+<text x="450.0" y="346.0" fill="var(--text-accent)" font-size="9.5" letter-spacing="1.2" font-weight="600" text-anchor="middle">ZENTRUM</text>
+<rect x="395.0" y="350.0" width="110" height="60" rx="14" fill="var(--interactive-accent)" fill-opacity="0.22" stroke="var(--interactive-accent)" stroke-opacity="0.6" stroke-width="2"/>
+<rect x="402.0" y="357.0" width="96" height="46" rx="9" fill="var(--interactive-accent)" stroke="var(--interactive-accent)" stroke-width="2.5" />
+<text x="450.0" y="376.0" fill="var(--text-on-accent)" font-size="12.5" font-weight="600" text-anchor="middle">Ich Selbst</text>
+<text x="450.0" y="393.0" fill="var(--text-on-accent)" font-size="10.5" text-anchor="middle">Ich</text>
+</g>
+<g class="cg-node" data-name="Petra Partner" data-sector="family" data-path="Ich Selbst|Petra Partner">
+<rect x="431.8" y="217.5" width="105.60000000000001" height="46" rx="9" fill="var(--background-secondary)" stroke="var(--background-modifier-border)" stroke-width="1" />
+<text x="484.6" y="236.5" fill="var(--text-normal)" font-size="12.5" font-weight="600" text-anchor="middle">Petra Partner</text>
+<text x="484.6" y="253.5" fill="var(--text-muted)" font-size="10.5" text-anchor="middle">Partnerin</text>
+</g>
+<g class="cg-node" data-name="Alex Beispiel" data-sector="family" data-path="Ich Selbst|Alex Beispiel">
+<rect x="549.7" y="230.4" width="105.60000000000001" height="46" rx="9" fill="var(--background-secondary)" stroke="var(--background-modifier-border)" stroke-width="1" />
+<text x="602.5" y="249.4" fill="var(--text-normal)" font-size="12.5" font-weight="600" text-anchor="middle">Alex Beispiel</text>
+<text x="602.5" y="266.4" fill="var(--text-muted)" font-size="10.5" text-anchor="middle">Vater</text>
+</g>
+<g class="cg-node" data-name="Andrea Beispiel" data-sector="family" data-path="Ich Selbst|Andrea Beispiel">
+<rect x="472.9" y="321.9" width="120" height="46" rx="9" fill="var(--background-secondary)" stroke="var(--background-modifier-border)" stroke-width="1" />
+<text x="532.9" y="340.9" fill="var(--text-normal)" font-size="12.5" font-weight="600" text-anchor="middle">Andrea Beispiel</text>
+<text x="532.9" y="357.9" fill="var(--text-muted)" font-size="10.5" text-anchor="middle">Mutter</text>
+</g>
+<g class="cg-node" data-name="Kim Beispiel" data-sector="family" data-path="Ich Selbst|Kim Beispiel">
+<rect x="599.5" y="336.3" width="98.4" height="46" rx="9" fill="var(--background-secondary)" stroke="var(--background-modifier-border)" stroke-width="1" />
+<text x="648.7" y="355.3" fill="var(--text-normal)" font-size="12.5" font-weight="600" text-anchor="middle">Kim Beispiel</text>
+<text x="648.7" y="372.3" fill="var(--text-muted)" font-size="10.5" text-anchor="middle">Tochter</text>
+</g>
+<g class="cg-node" data-name="Bruno Beispiel" data-sector="family" data-path="Ich Selbst|Bruno Beispiel">
+<rect x="587.3" y="451.6" width="112.8" height="46" rx="9" fill="var(--background-secondary)" stroke="var(--background-modifier-border)" stroke-width="1" />
+<text x="643.7" y="470.6" fill="var(--text-normal)" font-size="12.5" font-weight="600" text-anchor="middle">Bruno Beispiel</text>
+<text x="643.7" y="487.6" fill="var(--text-muted)" font-size="10.5" text-anchor="middle">Bruder</text>
+</g>
+<g class="cg-node" data-name="Gustav Beispiel" data-sector="family" data-path="Ich Selbst|Alex Beispiel|Gustav Beispiel">
+<rect x="469.6" y="436.9" width="120" height="46" rx="9" fill="var(--background-secondary)" stroke="var(--background-modifier-border)" stroke-width="1" />
+<text x="529.6" y="455.9" fill="var(--text-normal)" font-size="12.5" font-weight="600" text-anchor="middle">Gustav Beispiel</text>
+<text x="529.6" y="472.9" fill="var(--text-muted)" font-size="10.5" text-anchor="middle">Großvater</text>
+</g>
+<g class="cg-node" data-name="Otto Beispiel" data-sector="family" data-path="Ich Selbst|Alex Beispiel|Otto Beispiel">
+<rect x="415.8" y="552.4" width="105.60000000000001" height="46" rx="9" fill="var(--background-secondary)" stroke="var(--background-modifier-border)" stroke-width="1" />
+<text x="468.6" y="571.4" fill="var(--text-normal)" font-size="12.5" font-weight="600" text-anchor="middle">Otto Beispiel</text>
+<text x="468.6" y="588.4" fill="var(--text-muted)" font-size="10.5" text-anchor="middle">Onkel</text>
+</g>
+<g class="cg-node" data-name="Gisela Beispiel" data-sector="family" data-path="Ich Selbst|Andrea Beispiel|Gisela Beispiel">
+<rect x="354.6" y="440.0" width="120" height="46" rx="9" fill="var(--background-secondary)" stroke="var(--background-modifier-border)" stroke-width="1" />
+<text x="414.6" y="459.0" fill="var(--text-normal)" font-size="12.5" font-weight="600" text-anchor="middle">Gisela Beispiel</text>
+<text x="414.6" y="476.0" fill="var(--text-muted)" font-size="10.5" text-anchor="middle">Großmutter</text>
+</g>
+<g class="cg-node" data-name="Carla Beispiel" data-sector="family" data-path="Ich Selbst|Alex Beispiel|Otto Beispiel|Carla Beispiel">
+<rect x="279.1" y="523.4" width="112.8" height="46" rx="9" fill="var(--background-secondary)" stroke="var(--background-modifier-border)" stroke-width="1" />
+<text x="335.5" y="542.4" fill="var(--text-normal)" font-size="12.5" font-weight="600" text-anchor="middle">Carla Beispiel</text>
+<text x="335.5" y="559.4" fill="var(--text-muted)" font-size="10.5" text-anchor="middle">Cousine</text>
+</g>
+<g class="cg-node" data-name="Frieda Freund" data-sector="friends" data-path="Ich Selbst|Frieda Freund">
+<rect x="246.9" y="406.1" width="105.60000000000001" height="46" rx="9" fill="var(--background-secondary)" stroke="var(--background-modifier-border)" stroke-width="1" />
+<text x="299.7" y="425.1" fill="var(--text-normal)" font-size="12.5" font-weight="600" text-anchor="middle">Frieda Freund</text>
+<text x="299.7" y="442.1" fill="var(--text-muted)" font-size="10.5" text-anchor="middle">Freundin</text>
+</g>
+<g class="cg-node" data-name="Kai Kollege" data-sector="work" data-path="Ich Selbst|Kai Kollege">
+<rect x="258.8" y="291.3" width="96" height="46" rx="9" fill="var(--background-secondary)" stroke="var(--background-modifier-border)" stroke-width="1" />
+<text x="306.8" y="310.3" fill="var(--text-normal)" font-size="12.5" font-weight="600" text-anchor="middle">Kai Kollege</text>
+<text x="306.8" y="327.3" fill="var(--text-muted)" font-size="10.5" text-anchor="middle">Kollege</text>
+</g>
+<g class="cg-node" data-name="Nora Nachbar" data-sector="acquaintances" data-path="Ich Selbst|Nora Nachbar">
+<rect x="322.4" y="196.3" width="98.4" height="46" rx="9" fill="var(--background-secondary)" stroke="var(--background-modifier-border)" stroke-width="1" />
+<text x="371.6" y="215.3" fill="var(--text-normal)" font-size="12.5" font-weight="600" text-anchor="middle">Nora Nachbar</text>
+<text x="371.6" y="232.3" fill="var(--text-muted)" font-size="10.5" text-anchor="middle">Nachbarin</text>
+</g>
+</svg>

@@ -1,0 +1,4 @@
+node_modules/
+tests/helpers/.obsidian-mock.js
+*.zip
+.DS_Store
