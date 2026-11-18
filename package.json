@@ -6,7 +6,7 @@
   "scripts": {
     "build": "esbuild src/index.js --bundle --format=cjs --platform=node --external:obsidian --banner:js=\"/* contact-graph — generiert aus src/. Nicht direkt bearbeiten. */\" --outfile=main.js",
     "watch": "esbuild src/index.js --bundle --format=cjs --platform=node --external:obsidian --outfile=main.js --watch",
-    "test": "node --test tests/"
+    "test": "node --test tests/*.test.js"
   },
   "devDependencies": {
     "esbuild": "^0.28.2",
